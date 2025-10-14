@@ -28,12 +28,6 @@ Some of the tools and technologies I’ll be working with:
 | Monitoring | Prometheus, Grafana |
 
 ---
-
-## 🗂️ Structure
-The repository will be organized as follows:
-
-
-
 ---
 
 ## ☁️ Internship Focus
