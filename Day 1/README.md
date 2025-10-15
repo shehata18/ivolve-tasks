@@ -17,7 +17,7 @@ Files were provided as examples and may need small edits depending on the manage
 
 Assumptions
 - You have a control node (your machine) and a managed node reachable by SSH.
-## Day 1 — Ansible Labs (simplified)
+## Day 1 — Ansible Labs
 
 This folder contains inventories, playbooks and roles used for four hands-on labs demonstrating basic Ansible operations: ad-hoc commands, playbooks, roles, and Vault.
 
