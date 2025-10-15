@@ -1,0 +1,9 @@
+---
+- name: Configure managed node with Docker, kubectl, and Jenkins
+  hosts: servers
+  become: yes
+  roles:
+    - docker
+    - kubectl
+    - jenkins
+

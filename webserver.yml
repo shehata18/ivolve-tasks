@@ -1,0 +1,41 @@
+---
+- name: Automated Web Server Configuration using Ansible
+  hosts: servers
+  become: yes
+  tasks:
+
+    - name: Install Nginx web server
+      apt:
+        name: nginx
+        state: present
+
+    - name: Ensure Nginx service is running and enabled
+      service:
+        name: nginx
+        state: started
+        enabled: yes
+
+    - name: Deploy custom index.html page
+      copy:
+        dest: /var/www/html/index.html
+        content: |
+          <html>
+          <head>
+              <title>Welcome to My Automated Web Server</title>
+          </head>
+          <body style="background-color:#f2f2f2; text-align:center;">
+              <h1 style="color:green;">Nginx Web Server Configured by Ansible</h1>
+              <p>This page was deployed automatically using an Ansible Playbook.</p>
+          </body>
+          </html>
+
+    - name: Verify Nginx is serving the page
+      uri:
+        url: http://localhost
+        return_content: yes
+      register: webpage
+
+    - name: Show verification output
+      debug:
+        msg: "{{ webpage.content }}"
+
