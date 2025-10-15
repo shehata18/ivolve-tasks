@@ -1,0 +1,14 @@
+# Ignore local vault password files and other secrets
+.vault_pass.txt
+.vault_pass.txt.*
+
+# Ansible retry files
+*.retry
+
+# Python caches
+__pycache__/
+*.pyc
+
+# Example secrets
+secrets.yml
+*.vault
